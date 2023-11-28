@@ -1,4 +1,7 @@
 package classes.task2;
+
+import java.util.Arrays;
+
 /*
 Создайте класс Phone, который содержит поля number, model и weight.
 ○	Создайте три экземпляра (instance) этого класса.
@@ -15,11 +18,19 @@ package classes.task2;
  */
 public class Main {
     public static void main(String[] args) {
-        Phone samsung = new Phone(292209815,"S21+",250);
-        Phone apple = new Phone(336354923,"iPhone 14 Pro",300);
-        Phone xiaomi = new Phone(333515086,"mi 11",200);
+        Phone samsung = new Phone(292209815, "S21+", 250);
+        Phone apple = new Phone(336354923, "iPhone 14 Pro", 300);
+        Phone xiaomi = new Phone(333515086, "Mi 11", 200);
         System.out.println(samsung);
         System.out.println(apple);
         System.out.println(xiaomi);
+        System.out.println(samsung.receiveCall("Вася ") + samsung.getNumber());
+        System.out.println(apple.receiveCall("Петя ") + apple.getNumber());
+        System.out.println(xiaomi.receiveCall("Витя ") + xiaomi.getNumber());
+        samsung.receiveCall("Дима", 298569741);
+        apple.receiveCall("Лида", 297854698);
+        xiaomi.receiveCall("Женя", 335874896);
+        System.out.println(Arrays.toString(Phone.sendMessage(336354923, 292209815, 333515086)));
+
     }
 }

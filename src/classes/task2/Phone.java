@@ -15,32 +15,23 @@ public class Phone {
         return number;
     }
 
-    public void setNumber(int number) {
-        this.number = number;
+    public String receiveCall(String name) {
+        return ("Вам звонит: " + name);
     }
 
-    public String getModel() {
-        return model;
+    public void receiveCall(String name, int number) {
+        System.out.println("Вам звонит: " + name + " " + number);
     }
 
-    public void setModel(String model) {
-        this.model = model;
-    }
-
-    public double getWeight() {
-        return weight;
-    }
-
-    public void setWeight(double weight) {
-        this.weight = weight;
+    public static int[] sendMessage(int... number) {
+        return number;
     }
 
     @Override
     public String toString() {
-        return "Phone{" +
-                "number= " + number +
-                ", model= " + model +
-                ", weight= " + weight +
-                '}';
+        return
+                "number = " + number +
+                        ", model = " + model +
+                        ", weight = " + weight;
     }
 }
