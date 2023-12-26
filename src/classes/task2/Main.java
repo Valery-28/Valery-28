@@ -24,9 +24,9 @@ public class Main {
         System.out.println(samsung);
         System.out.println(apple);
         System.out.println(xiaomi);
-        System.out.println(samsung.receiveCall("Вася ") + samsung.getNumber());
-        System.out.println(apple.receiveCall("Петя ") + apple.getNumber());
-        System.out.println(xiaomi.receiveCall("Витя ") + xiaomi.getNumber());
+        System.out.println(samsung.getNumber(samsung.receiveCall("Вася ")));
+        System.out.println(apple.getNumber(apple.receiveCall("Петя ")));
+        System.out.println(xiaomi.getNumber(xiaomi.receiveCall("Витя ")));
         samsung.receiveCall("Дима", 298569741);
         apple.receiveCall("Лида", 297854698);
         xiaomi.receiveCall("Женя", 335874896);

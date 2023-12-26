@@ -11,7 +11,8 @@ public class Phone {
         this.weight = weight;
     }
 
-    public int getNumber() {
+    public int getNumber(String name) {
+        System.out.print(name);
         return number;
     }
 
